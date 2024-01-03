@@ -1,0 +1,65 @@
+.over-div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: black;
+}
+
+.navi{
+    margin-left: 50px;
+
+    a{
+        text-decoration: none;
+        padding: 8px;
+        color: white;
+        border-bottom: 1px solid none;
+        transition: all 250ms ease-in-out;
+        margin-left: 20px;
+        border-radius: 20px;
+    }
+}
+
+.Contacts{
+    margin-right: 50px;
+
+    a{
+        font-size: 14px;
+        border-radius: 20px;
+        padding: 16px;
+        color: white;
+        border: 1px solid white;
+        text-decoration: none;
+
+        &:hover{
+            background-color: rgba(207, 207, 207, 0.1);
+        }
+    }
+}
+
+.navi a {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+.navi a:after {
+    content: '';
+    position: absolute;
+    color: rgb(197, 197, 197);
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.navi a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    color: rgb(249, 213, 165);
+}
