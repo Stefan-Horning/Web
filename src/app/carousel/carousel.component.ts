@@ -1,50 +1,36 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { AlertModule } from '@coreui/angular';
-import { provideAnimations } from '@angular/platform-browser/animations';
-import { CarouselModule } from '@coreui/angular';
-import { HttpClientModule } from '@angular/common/http';  
-import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { trigger, state, style, animate, transition } from '@angular/animations';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Component,ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+
 @Component({
   selector: 'app-carousel',
   standalone: true,
-  imports: [AlertModule,LazyLoadImageModule, CarouselModule, CommonModule],
+  imports: [ CommonModule ],
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss',
-  providers: [provideAnimations()],
-  animations: [
-      trigger('slideAnimation', [
-      state('in', style({ transform: 'translateX(0)' })),
-      transition('void => *', [
-        style({ transform: 'translateX(-100%)' }),
-        animate('500ms ease-out') // Du kannst die Dauer und die Beschleunigung nach Bedarf anpassen
-      ]),
-      transition('* => void', [
-        animate('500ms ease-out', style({ transform: 'translateX(100%)' }))
-      ])
-    ])
-  ]
 })
 
-export class CarouselComponent implements OnInit{
-  slides: any[] = new Array(3).fill({id: -1, src: '', title: '', subtitle: ''});
+export class CarouselComponent implements AfterViewInit, OnDestroy{
+  images: string[] = [
+    'assets/img/Main-picture.jpg',
+    'assets/img/Main-picture.jpg',
+    'assets/img/head-1.JPG'
+  ];
+  currentImageIndex: number = 0;
+  private intervalId: any;
 
-  constructor() { }
+  constructor(private el: ElementRef) {}
 
-  ngOnInit(): void {
-    this.slides[0] = {
-      id: 0,
-      src: 'assets/img/Test2.jpeg',
-    };
-    this.slides[1] = {
-      id: 1,
-      src: 'assets/img/Test1.jpeg',
-    }
-    this.slides[2] = {
-      id: 2,
-      src: 'assets/img/Test3.jpeg',
-    }
+  ngAfterViewInit(): void {
+    this.intervalId = setInterval(() => {
+      this.nextImage();
+    }, 10000); 
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.intervalId);
+  }
+
+  nextImage(): void {
+    this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
   }
 }

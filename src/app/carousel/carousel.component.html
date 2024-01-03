@@ -1,12 +1,8 @@
-<c-carousel [animate]="false" transition="crossfade" [interval]="5000">
-  <c-carousel-inner>
-    <c-carousel-item *ngFor="let slide of slides" class="image">
-      <img
-        [src]="slide.src"
-        alt="{{slide.title}}"
-        class="d-block w-100"
-        loading="lazy"
-      />
-    </c-carousel-item>
-  </c-carousel-inner>
-</c-carousel>
+<div class="Main-picture-container">
+  <img *ngFor="let image of images; let i = index" 
+       [src]="image" 
+       [alt]="'Image ' + i" 
+       [class.active]="i === currentImageIndex" 
+       (load)="nextImage()"
+  />
+</div>
