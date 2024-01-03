@@ -36,15 +36,15 @@ export class CarouselComponent implements OnInit{
   ngOnInit(): void {
     this.slides[0] = {
       id: 0,
-      src: 'assets/img/Main-picture.jpg',
+      src: 'assets/img/Test2.jpeg',
     };
     this.slides[1] = {
       id: 1,
-      src: 'assets/img/head-1.JPG',
+      src: 'assets/img/Test1.jpeg',
     }
     this.slides[2] = {
       id: 2,
-      src: 'assets/img/head-1.JPG',
+      src: 'assets/img/Test3.jpeg',
     }
   }
 }
