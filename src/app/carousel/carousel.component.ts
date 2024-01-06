@@ -13,6 +13,10 @@ export class CarouselComponent implements AfterViewInit, OnDestroy{
   images: string[] = [
     'assets/img/Main-picture.jpg',
     'assets/img/Main-picture.jpg',
+    'assets/img/Main-picture.jpg',
+    'assets/img/Main-picture.jpg',
+    'assets/img/Main-picture.jpg',
+    'assets/img/Main-picture.jpg',
     'assets/img/head-1.JPG'
   ];
   currentImageIndex: number = 0;

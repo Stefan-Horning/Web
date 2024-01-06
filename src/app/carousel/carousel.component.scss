@@ -13,10 +13,49 @@
       height: 100%;
       object-fit: cover;
       opacity: 0;
-      transition: opacity 1s ease;
+      transition: opacity 1.2s ease;
+      object-position: top center;
   
       &.active {
         opacity: 1;
       }
     }
 }
+
+.ScrollDown{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  div{
+    animation: bounceUpDown 9s infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  span{
+    font-size: 14px;
+    color: white;
+  }
+
+  svg{
+    height: 30px;
+    width: 30px;
+    fill: white;
+  }
+}
+
+@keyframes bounceUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25%, 75% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+

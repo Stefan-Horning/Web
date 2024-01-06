@@ -1,13 +1,22 @@
 .over-div{
+    margin-top: 10px;
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 80px;
 }
 
 .navi{
+    display: flex;
     margin-left: 50px;
+
+    img{
+        object-fit: cover;
+        max-width: 250px;
+        max-height: 150px;
+        margin-right: 100px;
+    }
 
     a{
         text-decoration: none;
@@ -15,27 +24,126 @@
         color: white;
         border-bottom: 1px solid none;
         transition: all 250ms ease-in-out;
-        margin-left: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
         border-radius: 20px;
+        font-size: 18px;
     }
+    margin-right: 100px;
 }
 
-.Contacts{
+button {
+    width: 220px;
+    padding: 8px;
+    border: 1px solid white !important;
+    font-family: 'Open Sans';
     margin-right: 50px;
-
-    a{
-        font-size: 14px;
-        border-radius: 20px;
-        padding: 16px;
-        color: white;
-        border: 1px solid white;
-        text-decoration: none;
-
-        &:hover{
-            background-color: rgba(207, 207, 207, 0.1);
-        }
+    position: relative;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    overflow: hidden;
+  
+    &::before,
+    &::after {
+    border: none;
+      content: '';
+      width: 0;
+      height: 2px;
+      position: absolute;
+      transition: all 0.2s linear;
+      background: #fff;
+    }
+  
+    span {
+      &::before,
+      &::after {
+        content: '';
+        width: 2px;
+        height: 0;
+        position: absolute;
+        transition: all 0.2s linear;
+        background: #fff;
+      }
+    }
+  
+    &:hover::before,
+    &:hover::after {
+      width: 100%;
+    }
+  
+    &:hover span::before,
+    &:hover span::after {
+      height: 100%;
     }
 }
+  
+.btn-2 {
+    position: relative;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    overflow: hidden;
+  
+    &::before,
+    &::after {
+      content: '';
+      width: 0;
+      height: 2px;
+      position: absolute;
+      transition: all 0.2s linear;
+      background: #fff;
+      transition-delay: 0s;
+    }
+  
+    span {
+      &::before,
+      &::after {
+        content: '';
+        width: 2px;
+        height: 0;
+        position: absolute;
+        transition: all 0.2s linear;
+        background: #fff;
+        transition-delay: 0.2s;
+      }
+    }
+  
+    &::before {
+      right: 0;
+      top: 0;
+    }
+  
+    &::after {
+      left: 0;
+      bottom: 0;
+    }
+  
+    span::before {
+      left: 0;
+      top: 0;
+    }
+  
+    span::after {
+      right: 0;
+      bottom: 0;
+    }
+  
+    &:hover::before,
+    &:hover::after {
+      transition-delay: 0.2s;
+    }
+  
+    &:hover span::before,
+    &:hover span::after {
+      transition-delay: 0s;
+    }
+  }
+  
+
 
 .navi a {
     display: inline-block;
