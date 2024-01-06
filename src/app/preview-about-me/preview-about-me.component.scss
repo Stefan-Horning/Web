@@ -1,0 +1,41 @@
+.previewAboutMe{
+    background-color: rgb(50, 50, 50);
+    //background-color: #191B1D;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div{
+        display: flex;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            display: flex;
+            width: 550px;
+            margin-left: 150px;
+        }
+    }
+
+    h1{
+        font-size: 42px;
+        font-weight: 400;
+        display: flex;
+        justify-content: flex-start !important;
+        color: rgb(250, 209, 169);
+    }
+
+    span{
+       color:  rgb(225, 220, 215);
+       font-size: 22px;
+    }
+
+    img{
+        border-radius: 10px;
+        object-fit: cover;
+        height:550px;
+        width: 450px;
+    }
+}

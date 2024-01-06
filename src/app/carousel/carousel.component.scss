@@ -13,7 +13,7 @@
       height: 100%;
       object-fit: cover;
       opacity: 0;
-      transition: opacity 1.2s ease;
+      transition: opacity 1.5s ease;
       object-position: top center;
   
       &.active {
@@ -37,6 +37,7 @@
 
   span{
     font-size: 14px;
+    font-weight: 100;
     color: white;
   }
 
