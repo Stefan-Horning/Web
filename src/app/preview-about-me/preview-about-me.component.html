@@ -1,17 +1,19 @@
-<div class="previewAboutMe">
-    <div>
-        <div>
-            <img data-aos="fade-right" data-aos-duration="1500" src="./assets/img/firstAboutMe.jpg" alt="">
-        </div>
-        <div>
-            <h1>Swetlana Horning</h1>
-            <span>
-                Ich bin zutiefst davon überzeugt, dass Make-up die Kraft hat,
-                dein Selbstbewusstsein zu stärken und dir dadurch ein fantastisches Gefühl zu verleihen.
-            </span>
-        </div>
-        <div>
-            
+
+<div *ngFor="let i of previewArray">
+    <div class="previewAboutMe"  [ngStyle]="i.reverse ? {'background-color': '#151518'} : {}">
+        <div [ngStyle]="i.reverse ? {'flex-direction': 'row-reverse'} : {}">
+            <div class="image">
+                <img [attr.data-aos]="i.reverse ? 'fade-left' : 'fade-right'" data-aos-duration="1000" src="{{ i.src }}" alt="">
+            </div>
+            <div class="text">
+                <h1>{{ i.title }}</h1>
+                <span>
+                    {{i.span}}
+                </span>
+                <div class="button">
+                    <a>{{i.button}}</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

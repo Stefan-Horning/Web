@@ -12,12 +12,9 @@ import { Component,ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 export class CarouselComponent implements AfterViewInit, OnDestroy{
   images: string[] = [
     'assets/img/Main-picture.jpg',
-    'assets/img/Main-picture.jpg',
-    'assets/img/Main-picture.jpg',
-    'assets/img/Main-picture.jpg',
-    'assets/img/Main-picture.jpg',
-    'assets/img/Main-picture.jpg',
-    'assets/img/head-1.JPG'
+    'assets/img/photo2.jpg',
+    'assets/img/head-3.JPG',
+    'assets/img/head4.JPG',
   ];
   currentImageIndex: number = 0;
   private intervalId: any;
