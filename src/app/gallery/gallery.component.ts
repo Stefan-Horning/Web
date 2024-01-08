@@ -2,16 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { SlideshowComponent } from './slideshow/slideshow.component';
 
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,SlideshowComponent],
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.scss'
 })
 export class GalleryComponent implements OnInit{
   wich: string = 'all';
+  setImage:number = 0;
+  open:boolean = false;
 
   allImages:any = [
     './assets/img/all/all-1.jpg',
@@ -42,5 +45,9 @@ export class GalleryComponent implements OnInit{
     setTimeout(() =>{
       AOS.refresh();
     },500);
+  }
+
+  openSlider(){
+    this.open = !this.open;
   }
 }
