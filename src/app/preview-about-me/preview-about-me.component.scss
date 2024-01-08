@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Open Sans';
 
     div{
         display: flex;
@@ -26,65 +27,152 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 500px;
+        max-width: 700px;
         margin-left: 20px;
         margin-right: 20px;
 
         h1{
-            font-size: 42px;
+            font-size: 38px;
             font-weight: 400;
             display: flex;
             justify-content: flex-start !important;
             color: rgb(250, 209, 169);
+            color: rgb(154, 116, 83);
+            margin-bottom: 0;
+        }
+
+        h2{
+            font-weight: 300;
+            color: rgb(250, 209, 169);
+            color: rgb(180, 142, 104);
         }
     
         span{
            color:  rgb(225, 220, 215);
-           font-size: 22px;
+           font-size: 18px;
         }
     }
 
 }
 
 .button{
-    margin-top: 30px;
+    margin-top: 50px;
     font-family: 'Open Sans';
     margin-left: 0 !important;
     display: flex;
     justify-content: flex-start !important;
-    a{
-        cursor: pointer;
-        max-width: max-content;
-        display: inline-block;
-        position: relative;
-        color: white;
-        text-decoration: none;
-        padding: 8px;
-        padding-left: 0;
-        color: white;
-        border-bottom: 1px solid none;
-        transition: all 250ms ease-in-out;
-        border-radius: 20px;
-        font-size: 18px;
-    }
 }
 
-.button a:after {
-    content: '';
-    position: absolute;
-    color: rgb(197, 197, 197);
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(255, 255, 255);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+button {
+    border-radius: 5px;
+    padding: 8px;
+    min-width: 180px;
+    max-width: 230px;
+    border: 1px solid white !important;
+    font-family: 'Open Sans';
+    margin-right: 50px;
+    position: relative;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    overflow: hidden;
+  
+    &::before,
+    &::after {
+    border: none;
+      content: '';
+      width: 0;
+      height: 2px;
+      position: absolute;
+      transition: all 0.2s linear;
+      background: #fff;
+    }
+  
+    span {
+      &::before,
+      &::after {
+        content: '';
+        width: 2px;
+        height: 0;
+        position: absolute;
+        transition: all 0.2s linear;
+        background: #fff;
+      }
+    }
+  
+    &:hover::before,
+    &:hover::after {
+      width: 100%;
+    }
+  
+    &:hover span::before,
+    &:hover span::after {
+      height: 100%;
+    }
 }
   
-.button a:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-    color: rgb(249, 213, 165);
-}
+.btn-2 {
+    position: relative;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    overflow: hidden;
+  
+    &::before,
+    &::after {
+      content: '';
+      width: 0;
+      height: 2px;
+      position: absolute;
+      transition: all 0.2s linear;
+      background: #fff;
+      transition-delay: 0s;
+    }
+  
+    span {
+      &::before,
+      &::after {
+        content: '';
+        width: 2px;
+        height: 0;
+        position: absolute;
+        transition: all 0.2s linear;
+        background: #fff;
+        transition-delay: 0.2s;
+      }
+      font-size: 18px !important;
+    }
+  
+    &::before {
+      right: 0;
+      top: 0;
+    }
+  
+    &::after {
+      left: 0;
+      bottom: 0;
+    }
+  
+    span::before {
+      left: 0;
+      top: 0;
+    }
+  
+    span::after {
+      right: 0;
+      bottom: 0;
+    }
+  
+    &:hover::before,
+    &:hover::after {
+      transition-delay: 0.2s;
+    }
+  
+    &:hover span::before,
+    &:hover span::after {
+      transition-delay: 0s;
+    }
+  }
