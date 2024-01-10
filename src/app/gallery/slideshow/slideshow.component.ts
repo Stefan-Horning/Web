@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
+import { GalleryComponent } from '../gallery.component';
 
 @Component({
   selector: 'app-slideshow',
@@ -21,6 +22,14 @@ export class SlideshowComponent {
     console.log(this.wichone)
   }
 
+  constructor(private parent:GalleryComponent){}
+
+  close(event:Event){
+    if (event.target === event.currentTarget) {
+      this.parent.openSlider();
+    }
+    event.stopPropagation();
+  }
 
   bevor(){
     if(this.wichone <= 0){
