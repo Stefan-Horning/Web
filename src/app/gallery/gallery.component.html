@@ -1,7 +1,7 @@
 <div style="background-color: #151518; padding-bottom: 500px;" >
     <div class="overdiv">
-        <div *ngFor="let i of allImages" class="imageContainer">
-            <img (click)="openSlider()" data-aos="zoom-in" data-aos-duration="500" src="{{ i }}" alt="">
+        <div *ngFor="let i of allImages;let index = index" class="imageContainer">
+            <img (click)="openSlider(index)" data-aos="zoom-in" data-aos-duration="500" src="{{ i }}" alt="">
         </div>
     </div>
     <div class="button" data-aos="fade-up">

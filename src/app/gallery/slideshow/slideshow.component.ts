@@ -1,11 +1,10 @@
 import { Component, Input } from '@angular/core';
-import {MatIconModule} from '@angular/material/icon';
 import { GalleryComponent } from '../gallery.component';
 
 @Component({
   selector: 'app-slideshow',
   standalone: true,
-  imports: [MatIconModule],
+  imports: [],
   templateUrl: './slideshow.component.html',
   styleUrl: './slideshow.component.scss'
 })
@@ -20,9 +19,11 @@ export class SlideshowComponent {
       this.wichone += 1;
     }
     console.log(this.wichone)
+
   }
 
-  constructor(private parent:GalleryComponent){}
+  constructor(private parent:GalleryComponent){
+  }
 
   close(event:Event){
     if (event.target === event.currentTarget) {

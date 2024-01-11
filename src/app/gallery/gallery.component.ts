@@ -47,7 +47,10 @@ export class GalleryComponent implements OnInit{
     },500);
   }
 
-  openSlider(){
+  openSlider(i?:number){
+    if(i){
+      this.setImage = i;
+    }
     this.open = !this.open;
   }
 }
