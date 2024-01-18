@@ -1,0 +1,64 @@
+.footer-overdiv{
+    //height: 400px;
+    background-color: black;
+
+}
+
+.overcontacs{
+    height: 400px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.kontakt{
+    span{
+        color: white;
+        font-size: 26px;
+        padding: 16px;
+        padding-left: 0;
+    }
+
+    div{
+        margin-top: 20px;
+        padding: 8px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 0;
+
+        a{
+            cursor: pointer;
+
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+
+            span{
+                padding-left: 20px;
+                font-size: 18px;
+            }
+        }
+
+        img{
+            height: 30px;
+            width: 30px;
+            object-fit: cover;
+        }
+
+    }
+}
+
+.copyright{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span{
+        color: white;
+    }
+    padding-bottom: 20px;
+}
