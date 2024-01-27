@@ -4,6 +4,10 @@
 
 }
 
+.footer-overdiv{
+    padding: 16;
+}
+
 .overcontacs{
     height: 400px;
     background-color: black;
@@ -59,6 +63,79 @@
 
     span{
         color: white;
+    }
+    padding-bottom: 20px;
+}
+
+
+
+/*----------------------*/
+
+.sozialmedia-row{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    div{
+        margin: 16px;
+        height: 50px;
+        width: 50px;
+        background-color: rgb(246, 246, 246);
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover{
+            background-color: rgb(216, 216, 216);
+        }
+
+        img{
+            max-width: 30px;
+            max-height: 30px;
+            object-fit: cover;
+        }
+    }
+}
+
+.kontact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    a{
+        padding: 8px;
+        text-decoration: none;
+    }
+
+    span{
+        color: white;
+        padding: 8px;
+        &:hover{
+            color: rgb(213, 213, 213);
+        }
+    }
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.imprint{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        padding: 8px;
+        text-decoration: none;
+    }
+
+    span{
+        color: white;
+        padding: 8px;
+        &:hover{
+            color: rgb(213, 213, 213);
+        }
     }
     padding-bottom: 20px;
 }
