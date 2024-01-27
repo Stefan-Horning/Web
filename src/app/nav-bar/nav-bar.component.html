@@ -3,11 +3,11 @@
         <div>
             <img src="./assets/img/Logo.png" alt="">
         </div>
-        <a href="#">HOME</a>
-        <a href="#">GALERIE</a>
-        <a href="#">ÜBER-MICH</a>
-        <a href="#">PREISE</a>
-        <a href="#">KONTAKT</a>
+        <a href="#" [ngClass]="{'active-link': currentUrl === 'HOME'}" >HOME</a>
+        <a href="#" [ngClass]="{'active-link': currentUrl === 'GALERIE'}" >GALERIE</a>
+        <a href="#" [ngClass]="{'active-link': currentUrl === 'ÜBERMICH'}">ÜBER-MICH</a>
+        <a href="#" [ngClass]="{'active-link': currentUrl === 'PREISE'}">PREISE</a>
+        <a href="#" [ngClass]="{'active-link': currentUrl === 'KONTAKT'}">KONTAKT</a>
     </div>
     <button class="btn-2"><span>ANFRAGE SENDEN</span></button>
 </div>
