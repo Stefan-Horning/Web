@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { filter, map } from 'rxjs';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,19 +11,27 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent implements OnInit{
-  currentUrl?: string;
+  currentUrl!: any | null;
 
   constructor(private route: ActivatedRoute) { }
 
 
   ngOnInit(): void {
-    this.route.url.subscribe(urlSegments => {
-      // Der letzte Segmente des URL-Pfads ist das, was Sie suchen
-      this.currentUrl = urlSegments[urlSegments.length - 1].path;
-      if(this.currentUrl == ''){
-        this.currentUrl = 'HOME';
-      }
-      console.log(this.currentUrl);
-    });
+    const url = location.href;
+
+    // Gibt nur das Ende des URL-Pfades zurück
+    let pathname = location.pathname;
+    pathname = pathname.slice(1);
+
+    if(pathname == ''){
+      pathname = 'HOME';
+      this.currentUrl = 'HOME';
+    }else{
+      this.currentUrl = pathname;
+    }
+   
+    console.log(pathname); // /my-path
   }
+  
+
 }
