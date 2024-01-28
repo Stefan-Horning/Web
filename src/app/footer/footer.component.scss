@@ -91,6 +91,11 @@
             background-color: rgb(216, 216, 216);
         }
 
+        a{
+            max-width: 30px;
+            max-height: 30px;
+        }
+
         img{
             max-width: 30px;
             max-height: 30px;
@@ -138,4 +143,11 @@
         }
     }
     padding-bottom: 20px;
+}
+
+.noHover{
+    &:hover{
+        cursor: default !important;
+        color: white !important;
+    }
 }

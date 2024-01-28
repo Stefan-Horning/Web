@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 
 @Component({
@@ -13,10 +13,16 @@ import { filter, map } from 'rxjs';
 export class NavBarComponent implements OnInit{
   currentUrl!: any | null;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private router: Router) { 
+    this.getURL();
+  }
 
 
   ngOnInit(): void {
+    this.getURL();
+  }
+  
+  getURL(){
     const url = location.href;
 
     // Gibt nur das Ende des URL-Pfades zurück
@@ -32,6 +38,5 @@ export class NavBarComponent implements OnInit{
    
     console.log(pathname); // /my-path
   }
-  
 
 }

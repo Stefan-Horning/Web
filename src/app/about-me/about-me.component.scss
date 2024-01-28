@@ -1,4 +1,53 @@
-.over-div{
-    height: 500px;
-    background-color: black;
+.firstView{
+    height: 80vh;
+    width: 100%;
+    img{
+        height: 80vh;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
+.text-Aboutme{
+    background-color: #151518;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    h1{
+        color: rgb(154, 116, 83);
+        font-size: 36px;
+    }
+
+    span{
+        color: rgb(225, 220, 215);
+        line-height: 25px;
+    }
+}
+
+.AbotMeTextDiv{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    img{
+        height: 450px;
+        width: 350px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    div{
+        margin-left: 50px;
+        max-width: 500px;
+    }
+}
+
+.offers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
 }

@@ -17,22 +17,17 @@ export class GalleryComponent implements OnInit{
   open:boolean = false;
 
   allImages:any = [
-    './assets/img/all/all-1.jpg',
-    './assets/img/all/all-2.jpg',
-    './assets/img/all/all-3.jpg',
-    './assets/img/all/all-4.jpg',
-    './assets/img/all/all-5.jpg',
-    './assets/img/all/all-6.jpg',
-    './assets/img/all/all-7.jpg',
-    './assets/img/all/all-8.jpg',
-    './assets/img/all/all-9.jpg',
-    './assets/img/all/all-10.jpg',
-    './assets/img/all/all-11.jpg',
-    './assets/img/all/all-12.jpg',
-    './assets/img/all/all-13.jpg',
-    './assets/img/all/all-14.jpg',
-    './assets/img/all/all-15.jpg',
-    './assets/img/all/all-16.jpg',
+   './assets/img/first15/first1.jpg',
+   './assets/img/first15/first4.jpg',
+   './assets/img/first15/first3.jpg',
+   './assets/img/first15/first2.jpg',
+   './assets/img/first15/first5.jpg',
+   './assets/img/first15/first6.jpg',
+   './assets/img/first15/first7.jpg',
+   './assets/img/first15/first8.jpg',
+   './assets/img/first15/first9.jpg',
+   './assets/img/first15/first12.jpg',
+   './assets/img/first15/first11.jpg',
   ];
 
   ngOnInit(): void {
