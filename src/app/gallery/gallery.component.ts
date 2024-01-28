@@ -21,12 +21,14 @@ export class GalleryComponent implements OnInit{
   constructor(){
     this.getURL();
     this.currentImages = [];
-    if(this.currentUrl == 'HOME'){
+    if(this.currentUrl == 'Home'){
       this.currentImages = this.allImages;
     }else if(this.currentUrl == 'AboutMe'){
       this.currentImages = this.AboutMeImages;
+    }else if(this.currentUrl == 'Braut'){
+      this.currentImages = this.BrautImages;
     }else{
-      this.currentImages = ['./assets/img/über mich bilder/AboutMe1.jpg'];
+      this.currentImages = ['./assets/img/AboutMe/AboutMe1.jpg'];
     }
   }
 
@@ -39,7 +41,7 @@ export class GalleryComponent implements OnInit{
 
     if(pathname == ''){
       pathname = 'HOME';
-      this.currentUrl = 'HOME';
+      this.currentUrl = 'Home';
     }else{
       this.currentUrl = pathname;
     }
@@ -49,6 +51,20 @@ export class GalleryComponent implements OnInit{
 
   currentImages:string[] = [
 
+  ]
+
+  BrautImages:string[] = [
+    './assets/img/Brautglanz/braut1.jpg',
+    './assets/img/Brautglanz/braut2.jpg',
+    './assets/img/Brautglanz/braut3.jpg',
+    './assets/img/Brautglanz/braut4.jpg',
+    './assets/img/Brautglanz/braut5.jpg',
+    './assets/img/Brautglanz/braut6.jpg',
+    './assets/img/Brautglanz/braut7.jpg',
+    './assets/img/Brautglanz/braut11.jpg',
+    './assets/img/Brautglanz/braut12.jpg',
+    './assets/img/Brautglanz/braut13.jpg',
+    './assets/img/photo3.jpg',
   ]
 
   AboutMeImages:string[] = [
