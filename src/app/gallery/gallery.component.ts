@@ -16,13 +16,14 @@ export class GalleryComponent implements OnInit{
   setImage:number = 0;
   open:boolean = false;
   currentUrl!:string;
+  isGallary:boolean = true;
 
   constructor(){
     this.getURL();
     this.currentImages = [];
-    if(this.currentUrl = 'HOME'){
+    if(this.currentUrl == 'HOME'){
       this.currentImages = this.allImages;
-    }else if(this.currentUrl = 'AboutMe'){
+    }else if(this.currentUrl == 'AboutMe'){
       this.currentImages = this.AboutMeImages;
     }else{
       this.currentImages = ['./assets/img/über mich bilder/AboutMe1.jpg'];
