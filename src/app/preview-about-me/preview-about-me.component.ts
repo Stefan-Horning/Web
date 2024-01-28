@@ -19,6 +19,7 @@ export class PreviewAboutMeComponent implements OnInit{
       span: 'Ich bin zutiefst davon überzeugt, dass Make-up die Kraft hat,dein Selbstbewusstsein zu stärken und dir dadurch ein fantastisches Gefühl zu verleihen.',
       button: 'Mehr über mich',
       reverse: false,
+      nav: 'AboutMe'
     },
     {
       src: './assets/img/all-49.jpeg',
@@ -27,6 +28,7 @@ export class PreviewAboutMeComponent implements OnInit{
       span: 'Möchtest Du auf Deiner Hochzeit wie ein Star erstrahlen oder Deine natürliche Schönheit auf eine ganz besondere Art betonen? Ich unterstütze Dich dabei, Dein perfektes Brautstyling zu kreieren!',
       button: 'Mehr über Braut',
       reverse: true,
+      nav: 'Braut'
     },
     {
       src: './assets/img/head-2.jpg',
@@ -35,9 +37,9 @@ export class PreviewAboutMeComponent implements OnInit{
       span: 'Entdecken Sie meine Angebote, passend zu Ihren Bedürfnissen!',
       button: 'Mehr zu meinen Preisen',
       reverse: false,
+      nav: 'Preis'
     },
   ]
-
   
   ngOnInit(): void {
     AOS.init({

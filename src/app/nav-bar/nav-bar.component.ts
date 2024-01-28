@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { filter, map } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -30,8 +29,8 @@ export class NavBarComponent implements OnInit{
     pathname = pathname.slice(1);
 
     if(pathname == ''){
-      pathname = 'HOME';
-      this.currentUrl = 'HOME';
+      pathname = 'Home';
+      this.currentUrl = 'Home';
     }else{
       this.currentUrl = pathname;
     }
