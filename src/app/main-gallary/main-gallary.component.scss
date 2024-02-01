@@ -1,0 +1,74 @@
+.firstView{
+    height: 80vh;
+    width: 100%;
+    img{
+        height: 80vh;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
+.header{
+    background-color: #151518;
+    display: flex;
+    justify-content: center;
+
+    h1{
+        color: rgb(248, 206, 151);
+        font-size: 38px;
+    }
+}
+
+.overdiv{
+    background-color: #151518;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+
+    div{
+        margin: 40px;
+        position: relative;
+        height: 550px;
+        width: 350px;
+        overflow: hidden;
+        &:hover{
+            span{
+                bottom: 30px;
+            }
+            .dark{
+                display: block;
+            }
+        }
+
+        img{
+            height: 550px;
+            width: 350px;
+            object-fit: cover;
+        }
+
+        
+        span{
+            z-index: 4;
+            transition: all 225ms ease-in-out;
+            position: absolute;
+            bottom: -50px;
+            left: 20px;
+            color: rgb(248, 215, 172);
+            font-size: 22px;
+        }
+
+        .dark{
+            margin: 0;
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+    }
+}
