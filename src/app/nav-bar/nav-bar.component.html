@@ -9,5 +9,5 @@
         <a href="/Braut" [ngClass]="{'active-link': currentUrl === 'Braut'}">BRAUT</a>
         <a href="/Preis" [ngClass]="{'active-link': currentUrl === 'Preis'}">PREISE</a>
     </div>
-    <button class="btn-2"><span>ANFRAGE SENDEN</span></button>
+    <a href="/Kontakt"><button class="btn-2"><span  [ngClass]="{'active-link': currentUrl === 'Kontakt'}">ANFRAGE SENDEN</span></button></a>
 </div>

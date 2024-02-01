@@ -1,0 +1,28 @@
+<div class="firstView">
+    <img src="./assets/img/StylingKreationen/kontakt1.JPG" alt="">
+</div>
+<div class="overdiv-kontact">
+    <img src="./assets/img/kontact.JPG" alt="">
+    <div>
+        <h1>Kontaktieren Sie mich</h1>
+        <span class="send" *ngIf="send">Nachricht gesendet</span>
+        <form #form (submit)="sendMail()" [formGroup]="contactForm">
+            <div>
+                <input autocomplete="off" #nameField formControlName="nameInput" required minlength="2" type="text" placeholder="Ihren Namen" [(ngModel)]="name">
+                <!-- <span *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)">Bitte geben Sie Ihren Namen an</span> -->
+            </div>
+            <div>
+                <input autocomplete="off" #emailField formControlName="emailInput" required type="email" placeholder="Ihre E-Mail" [(ngModel)]="email">
+                <!-- <span *ngIf=" contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched && contactForm.controls['email'].hasError('pattern'))">Bitte geben Sie Ihre E-Mail an</span> -->
+            </div>
+            <div>
+                <textarea autocomplete="off" #massageField formControlName="massageInput" required minlength="5" placeholder="Ihre Nachricht an mich" [(ngModel)]="massage" cols="30" rows="10"></textarea>
+                <!-- <span *ngIf="contactForm.controls['massage'].invalid && (contactForm.controls['massage'].dirty || contactForm.controls['massage'].touched)" >Mindestlänge 5 Zeichen</span> -->
+            </div>
+            <div>
+                <button [disabled]="!contactForm.valid" #buttonField>Nachricht senden</button>
+            </div>
+            
+        </form>
+    </div>
+</div>
