@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { CommonModule, } from '@angular/common';
+import { Component, OnInit,Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,9 +11,14 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent implements OnInit{
   currentUrl!: any | null;
+  openMobile:boolean = false;
 
   constructor(private router: Router) { 
     this.getURL();
+  }
+
+  openNav(){
+    this.openMobile = !this.openMobile;
   }
 
 

@@ -14,13 +14,23 @@
 
     img{
         cursor: pointer;
-        max-height: 400px !important;
-        max-width: 600px !important;
+        max-height: 400px ;
+        max-width: 600px ;
         object-fit: cover;
         transition: 225ms all ease-in-out;
 
         &:hover{
             transform: scale(1.1);
+        }
+
+        @media (max-width:650px) {
+          max-height: 350px ;
+          max-width: 450px ;
+        }
+
+        @media (max-width:500px) {
+          max-height: 300px ;
+          max-width: 290px ;
         }
     }
 }

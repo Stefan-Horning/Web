@@ -1,4 +1,27 @@
-<div class="over-div">
+<div class="over-div destop" *ngIf="openMobile">
+    <div class="navi">
+        <div>
+            <img src="./assets/img/Logo.png" alt="">
+        </div>
+        <a href="/Home" [ngClass]="{'active-link': currentUrl === 'Home'}" >HOME</a>
+        <a href="/Galerie" [ngClass]="{'active-link': currentUrl === 'Galerie'}" >GALERIE</a>
+        <a href="/AboutMe" [ngClass]="{'active-link': currentUrl === 'AboutMe'}">ÜBER-MICH</a>
+        <a href="/Braut" [ngClass]="{'active-link': currentUrl === 'Braut'}">BRAUT</a>
+        <a href="/Preis" [ngClass]="{'active-link': currentUrl === 'Preis'}">PREISE</a>
+    </div>
+    <a href="/Kontakt"><button class="btn-2"><span  [ngClass]="{'active-link': currentUrl === 'Kontakt'}">ANFRAGE SENDEN</span></button></a>
+</div>
+
+<div (click)="openNav()" class="close" *ngIf="!openMobile">
+    <img src="./assets/img/icons/menu.png" alt="">
+</div>
+
+<div (click)="openNav()" class="close"  *ngIf="openMobile">
+    <img src="./assets/img/icons/x.png" alt="">
+</div>
+
+<div class="over-div mobile" *ngIf="openMobile">
+
     <div class="navi">
         <div>
             <img src="./assets/img/Logo.png" alt="">
