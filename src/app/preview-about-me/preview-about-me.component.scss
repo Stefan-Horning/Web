@@ -1,13 +1,32 @@
 .previewAboutMe{
     background-color: #1d1d20;
-    height: 600px;
+    //height: 600px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Open Sans';
 
+    @media (max-width:1000px) {
+      max-height: none;
+
+      div{
+        flex-direction: column-reverse !important;
+        align-items: center;
+
+        
+        h1,h2,span{
+          margin-left: 10px;
+          margin-right: 10px;
+          text-align: center;
+        }
+
+      }
+      
+    }
+
     div{
+      padding: 8px;
         display: flex;
         justify-content: center;
         width: 100%;
@@ -21,11 +40,29 @@
             height:550px;
             width: 450px;
         }
+
+        @media (max-width:800px) {
+          max-width: 350px;
+
+          img{
+            height:450px;
+            width: 350px;
+          }
+        }
+
+       @media (max-width:400px) {
+        max-width: 300px;
+
+        img{
+          height:400px;
+          width: 300px;
+        }
+       } 
     }
 
     .text{
         display: flex;
-        flex-direction: column;
+        flex-direction: column !important;
         justify-content: center;
         max-width: 700px;
         margin-left: 20px;
@@ -59,6 +96,7 @@
     margin-left: 0 !important;
     display: flex;
     justify-content: flex-start !important;
+    padding: 0 !important;
 }
 
 button {
@@ -118,6 +156,11 @@ button {
     cursor: pointer;
     font-size: 18px;
     overflow: hidden;
+
+    @media (max-width:1000px){
+      margin: 0;
+
+    }
   
     &::before,
     &::after {
@@ -141,7 +184,11 @@ button {
         background: #fff;
         transition-delay: 0.2s;
       }
-      font-size: 18px !important;
+      font-size: 18px ;
+
+      @media (max-width:1000px) {
+        font-size: 16px !important;
+      }
     }
   
     &::before {
