@@ -5,7 +5,7 @@
         </div>
     </div>
     <div *ngIf="isGallary" class="button" data-aos="fade-up">
-        <button class="btn-2"><span>Zur meiner Galerie</span></button>
+        <a href="Galerie"><button href="" class="btn-2"><span>Zur meiner Galerie</span></button></a>
     </div>
 </div>
 <app-slideshow *ngIf="open" [images]="currentImages" [wichone]="setImage"></app-slideshow>

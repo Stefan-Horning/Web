@@ -25,8 +25,12 @@ export class GalleryComponent implements OnInit{
       this.currentImages = this.allImages;
     }else if(this.currentUrl == 'AboutMe'){
       this.currentImages = this.AboutMeImages;
-    }else if(this.currentUrl == 'Braut'){
+    }else if(this.currentUrl == 'Braut' || this.currentUrl == 'Brautglanz'){
       this.currentImages = this.BrautImages;
+    }else if(this.currentUrl == 'Frisurenwelt'){
+      this.currentImages = this.frisurenWelt;
+    }else if(this.currentUrl == 'Kreatives'){
+      this.currentImages = this.kreativWelt;
     }else{
       this.currentImages = ['./assets/img/AboutMe/AboutMe1.jpg'];
     }
@@ -51,6 +55,52 @@ export class GalleryComponent implements OnInit{
 
   currentImages:string[] = [
 
+  ]
+
+  kreativWelt:string[] = [
+    './assets/img/StylingKreationen/1.jpg',
+    './assets/img/StylingKreationen/2.jpg',
+    './assets/img/StylingKreationen/3.jpg',
+    './assets/img/StylingKreationen/4.jpg',
+    './assets/img/StylingKreationen/5.jpg',
+    './assets/img/StylingKreationen/6.jpg',
+    './assets/img/StylingKreationen/7.jpg',
+    './assets/img/StylingKreationen/8.jpg',
+    './assets/img/StylingKreationen/9.jpg',
+    './assets/img/StylingKreationen/10.jpg',
+    './assets/img/StylingKreationen/11.jpg',
+    './assets/img/StylingKreationen/12.jpg',
+    './assets/img/StylingKreationen/13.jpg',
+    './assets/img/StylingKreationen/14.jpg',
+    './assets/img/StylingKreationen/15.jpg',
+    './assets/img/StylingKreationen/16.jpg',
+    './assets/img/StylingKreationen/17.jpg',
+    './assets/img/StylingKreationen/18.jpg',
+    './assets/img/StylingKreationen/19.jpg',
+    './assets/img/StylingKreationen/20.jpg',
+    './assets/img/StylingKreationen/21.jpg',
+    './assets/img/StylingKreationen/22.jpg',
+    './assets/img/StylingKreationen/23.jpg',
+    './assets/img/StylingKreationen/24.jpg',
+    './assets/img/StylingKreationen/25.jpg',
+    './assets/img/StylingKreationen/26.jpeg',
+    './assets/img/StylingKreationen/27.jpeg',
+  ]
+
+  frisurenWelt:string[] = [
+    './assets/img/Frisurenwelt/1.jpg',
+    './assets/img/Frisurenwelt/2.jpg',
+    './assets/img/Frisurenwelt/3.jpeg',
+    './assets/img/Frisurenwelt/4.jpg',
+    './assets/img/Frisurenwelt/5.jpg',
+    './assets/img/Frisurenwelt/6.jpg',
+    './assets/img/Frisurenwelt/7.jpg',
+    './assets/img/Frisurenwelt/8.jpg',
+    './assets/img/Frisurenwelt/9.jpg',
+    './assets/img/Frisurenwelt/10.jpg',
+    './assets/img/Frisurenwelt/11.jpg',
+    './assets/img/Frisurenwelt/12.jpeg',
+    './assets/img/Frisurenwelt/13.jpg',
   ]
 
   BrautImages:string[] = [
