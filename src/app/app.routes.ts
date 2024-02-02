@@ -7,6 +7,7 @@ import { KontactComponent } from './kontact/kontact.component';
 import { MainGallaryComponent } from './main-gallary/main-gallary.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ShowGallaryComponent } from './show-gallary/show-gallary.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 export const routes: Routes = [
     {path: '', component:HomeComponent},
@@ -18,5 +19,6 @@ export const routes: Routes = [
     {path: 'Brautglanz', component:ShowGallaryComponent},
     {path: 'Frisurenwelt', component:ShowGallaryComponent},
     {path: 'Kreatives', component:ShowGallaryComponent},
+    {path: 'Impressum', component:ImprintComponent},
     {path: '**', redirectTo: ''}
 ];
