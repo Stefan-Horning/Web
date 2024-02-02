@@ -73,6 +73,11 @@
       margin-left: 0px;
     }
 
+    @media (max-width:1340px) {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
     img{
         object-fit: cover;
         max-width: 300px;
@@ -82,6 +87,12 @@
         @media (max-width:1000px) {
           margin-right: 0px;
           padding: 16px;
+        }
+
+        @media (max-width:1340px) {
+          margin-right: 10px;
+          max-width: 250px;
+          max-height: 150px;
         }
     }
 
@@ -225,6 +236,10 @@ button {
     display: inline-block;
     position: relative;
     color: white;
+
+    @media (max-width:1340px) {
+      font-size: 16px;
+    }
 }
 
 .navi a:after {
