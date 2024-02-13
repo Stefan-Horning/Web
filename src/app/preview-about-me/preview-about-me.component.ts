@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 //import * as AOS from 'aos';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 @Component({
   selector: 'app-preview-about-me',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './preview-about-me.component.html',
   styleUrl: './preview-about-me.component.scss'
 })

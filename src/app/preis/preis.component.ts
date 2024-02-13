@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-preis',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './preis.component.html',
   styleUrl: './preis.component.scss'
 })

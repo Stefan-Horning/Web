@@ -4,7 +4,7 @@ import { Component,ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 @Component({
   selector: 'app-carousel',
   standalone: true,
-  imports: [ CommonModule ],
+  imports: [ CommonModule,],
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss',
 })

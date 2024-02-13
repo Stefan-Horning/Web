@@ -20,5 +20,6 @@ export const routes: Routes = [
     {path: 'Frisurenwelt', component:ShowGallaryComponent},
     {path: 'Kreatives', component:ShowGallaryComponent},
     {path: 'Impressum', component:ImprintComponent},
-    {path: '**', redirectTo: ''}
+    {path: '**', redirectTo: ''},
+
 ];

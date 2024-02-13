@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { SlideshowComponent } from './slideshow/slideshow.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [CommonModule,SlideshowComponent],
+  imports: [CommonModule,SlideshowComponent,RouterLink],
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.scss'
 })

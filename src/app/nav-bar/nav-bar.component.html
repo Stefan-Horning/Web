@@ -3,13 +3,13 @@
         <div>
             <img src="./assets/img/Logo.png" alt="">
         </div>
-        <a href="/Home" [ngClass]="{'active-link': currentUrl === 'Home'}" >HOME</a>
-        <a href="/Galerie" [ngClass]="{'active-link': currentUrl === 'Galerie'}" >GALERIE</a>
-        <a href="/AboutMe" [ngClass]="{'active-link': currentUrl === 'AboutMe'}">ÜBER-MICH</a>
-        <a href="/Braut" [ngClass]="{'active-link': currentUrl === 'Braut'}">BRAUT</a>
-        <a href="/Preis" [ngClass]="{'active-link': currentUrl === 'Preis'}">PREISE</a>
+        <a routerLink="/Home" [ngClass]="{'active-link': currentUrl === 'Home'}" >HOME</a>
+        <a routerLink="/Galerie" [ngClass]="{'active-link': currentUrl === 'Galerie'}" >GALERIE</a>
+        <a routerLink="/AboutMe" [ngClass]="{'active-link': currentUrl === 'AboutMe'}">ÜBER-MICH</a>
+        <a routerLink="/Braut" [ngClass]="{'active-link': currentUrl === 'Braut'}">BRAUT</a>
+        <a routerLink="/Preis" [ngClass]="{'active-link': currentUrl === 'Preis'}">PREISE</a>
     </div>
-    <a href="/Kontakt"><button class="btn-2"><span  [ngClass]="{'active-link': currentUrl === 'Kontakt'}">ANFRAGE SENDEN</span></button></a>
+    <a routerLink="/Kontakt"><button class="btn-2"><span  [ngClass]="{'active-link': currentUrl === 'Kontakt'}">ANFRAGE SENDEN</span></button></a>
 </div>
 
 <div (click)="openNav()" class="close" *ngIf="!openMobile">
@@ -26,11 +26,11 @@
         <div>
             <img src="./assets/img/Logo.png" alt="">
         </div>
-        <a href="/Home" [ngClass]="{'active-link': currentUrl === 'Home'}" >HOME</a>
-        <a href="/Galerie" [ngClass]="{'active-link': currentUrl === 'Galerie'}" >GALERIE</a>
-        <a href="/AboutMe" [ngClass]="{'active-link': currentUrl === 'AboutMe'}">ÜBER-MICH</a>
-        <a href="/Braut" [ngClass]="{'active-link': currentUrl === 'Braut'}">BRAUT</a>
-        <a href="/Preis" [ngClass]="{'active-link': currentUrl === 'Preis'}">PREISE</a>
+        <a routerLink="/Home" [ngClass]="{'active-link': currentUrl === 'Home'}" >HOME</a>
+        <a routerLink="/Galerie" [ngClass]="{'active-link': currentUrl === 'Galerie'}" >GALERIE</a>
+        <a routerLink="/AboutMe" [ngClass]="{'active-link': currentUrl === 'AboutMe'}">ÜBER-MICH</a>
+        <a routerLink="/Braut" [ngClass]="{'active-link': currentUrl === 'Braut'}">BRAUT</a>
+        <a routerLink="/Preis" [ngClass]="{'active-link': currentUrl === 'Preis'}">PREISE</a>
     </div>
-    <a href="/Kontakt"><button class="btn-2"><span  [ngClass]="{'active-link': currentUrl === 'Kontakt'}">ANFRAGE SENDEN</span></button></a>
+    <a routerLink="/Kontakt"><button class="btn-2"><span  [ngClass]="{'active-link': currentUrl === 'Kontakt'}">ANFRAGE SENDEN</span></button></a>
 </div>
