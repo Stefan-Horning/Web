@@ -16,21 +16,21 @@
     <img src="./assets/img/icons/menu.png" alt="">
 </div>
 
-<div (click)="openNav()" class="close"  *ngIf="openMobile">
-    <img src="./assets/img/icons/x.png" alt="">
-</div>
+<img  class="mobile-logo" src="./assets/img/Logo.png" alt="">
+
 
 <div class="over-div mobile" *ngIf="openMobile">
-
+    <img (click)="openNav()" class="closeButton" src="./assets/img/icons/x.png" alt="">
     <div class="navi">
+
         <div>
             <img src="./assets/img/Logo.png" alt="">
         </div>
-        <a routerLink="/Home" [routerLinkActive]="'active-link'" >HOME</a>
-        <a routerLink="/Galerie" [routerLinkActive]="'active-link'" >GALERIE</a>
-        <a routerLink="/AboutMe" [routerLinkActive]="'active-link'">ÜBER-MICH</a>
-        <a routerLink="/Braut" [routerLinkActive]="'active-link'">BRAUT</a>
-        <a routerLink="/Preis" [routerLinkActive]="'active-link'">PREISE</a>
+        <a routerLink="/Home" (click)="openNav()" [routerLinkActive]="'active-link'" >HOME</a>
+        <a routerLink="/Galerie" (click)="openNav()" [routerLinkActive]="'active-link'" >GALERIE</a>
+        <a routerLink="/AboutMe" (click)="openNav()" [routerLinkActive]="'active-link'">ÜBER-MICH</a>
+        <a routerLink="/Braut" (click)="openNav()" [routerLinkActive]="'active-link'">BRAUT</a>
+        <a routerLink="/Preis" (click)="openNav()" [routerLinkActive]="'active-link'">PREISE</a>
     </div>
-    <a routerLink="/Kontakt"><button class="btn-2"><span  [routerLinkActive]="'active-link'">ANFRAGE SENDEN</span></button></a>
+    <a routerLink="/Kontakt" (click)="openNav()"><button class="btn-2"><span  [routerLinkActive]="'active-link'">ANFRAGE SENDEN</span></button></a>
 </div>

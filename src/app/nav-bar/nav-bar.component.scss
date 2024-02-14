@@ -52,7 +52,7 @@
   @media (max-width:1000px) {
     display: flex !important;
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 20px;
   }
   img{
@@ -265,4 +265,27 @@ button {
 
 .active-link{
   color: rgb(248, 206, 151) !important;
+}
+
+.mobile-logo{
+  display: none;
+  @media (max-width:1000px) {
+    display: block;
+    position: absolute;
+  top: 0px;
+  left: 20px;
+
+  width: 200px;
+  height: 80px;
+  object-fit: contain;
+  }
+  
+}
+
+.closeButton{
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  height: 20px;
+  width: 20px;
 }
