@@ -19,11 +19,22 @@
       &.active {
         opacity: 1;
       }
+
+      // @media (max-width:1000px) {
+      //    right;
+      // }
     }
 
+
     @media (max-width:1000px) {
-      height: 80vh;
+      height: 60vh;
+      
     }
+}
+
+
+.right{
+  object-position: top right !important;
 }
 
 .ScrollDown{

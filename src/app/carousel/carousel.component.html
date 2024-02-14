@@ -3,6 +3,7 @@
        [src]="image" 
        [alt]="'Image ' + i" 
        [class.active]="i === currentImageIndex" 
+       [class.right]="imagesstyle[i] == 'right'"
        (load)="nextImage()"
   />
 

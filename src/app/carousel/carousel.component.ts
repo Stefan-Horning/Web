@@ -17,6 +17,14 @@ export class CarouselComponent implements AfterViewInit, OnDestroy{
     'assets/img/head7.jpeg',
     'assets/img/head6.jpg',
   ];
+
+  imagesstyle:string[] = [
+    'right',
+    'right',
+    'center',
+    'center',
+    'center',
+  ]
   currentImageIndex: number = 0;
   private intervalId: any;
 
