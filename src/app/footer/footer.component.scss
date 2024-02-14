@@ -8,6 +8,18 @@
     padding: 16;
 }
 
+.ToTop{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    img{
+        cursor: pointer;
+        padding: 16px;
+    }
+}
+
 .overcontacs{
     height: 400px;
     background-color: black;

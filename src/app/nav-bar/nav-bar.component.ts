@@ -40,8 +40,7 @@ export class NavBarComponent implements OnInit{
     }else{
       this.currentUrl = pathname;
     }
-   
-    console.log(pathname); // /my-path
+  
   }
 
 }

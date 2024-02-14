@@ -50,8 +50,7 @@ export class GalleryComponent implements OnInit{
     }else{
       this.currentUrl = pathname;
     }
-   
-    console.log(pathname); // /my-path
+  
   }
 
   currentImages:string[] = [

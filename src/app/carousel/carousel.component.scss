@@ -20,16 +20,35 @@
         opacity: 1;
       }
 
-      // @media (max-width:1000px) {
-      //    right;
-      // }
+        @media (max-width:1000px) {
+          object-fit: cover;
+        }
     }
 
 
     @media (max-width:1000px) {
+      height: 80vh;
+      
+    }
+    @media (max-width:800px) {
       height: 60vh;
       
     }
+
+    @media (max-width:600px) {
+      height: 50vh;
+      
+    }
+
+    @media (max-width:450px) {
+      height: 45vh;
+      
+    }
+
+    // @media (max-width:350px) {
+    //   height: 35vh;
+      
+    // }
 }
 
 

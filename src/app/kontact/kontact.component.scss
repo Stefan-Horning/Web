@@ -10,6 +10,36 @@
         @media (max-width:1000px) {
             object-position: top right;
         }
+
+        @media (max-width:700px) {
+            height: 70vh;
+        }
+  
+        @media (max-width:600px) {
+            height: 60vh;
+        }
+  
+        @media (max-width:500px) {
+            height: 50vh;
+        }
+        @media (max-width:400px) {
+            height: 45vh;
+        }
+    }
+
+    @media (max-width:700px) {
+        height: 70vh;
+    }
+
+    @media (max-width:600px) {
+        height: 60vh;
+    }
+
+    @media (max-width:500px) {
+        height: 50vh;
+    }
+    @media (max-width:400px) {
+        height: 45vh;
     }
 }
 
@@ -101,7 +131,7 @@ form{
         }
 
         @media (max-width:1000px) {
-            max-width: 300px !important;
+            max-width: 250px !important;
         }
     }
 
@@ -122,8 +152,8 @@ form{
         font-family: 'Open Sans';
 
         @media (max-width:1000px) {
-            width: 300px !important;
-            min-width: 300px !important;
+            width: 250px !important;
+            min-width: 250px !important;
         }
         &::placeholder{
             color: rgb(225, 220, 215);

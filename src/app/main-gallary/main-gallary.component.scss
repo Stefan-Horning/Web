@@ -6,6 +6,37 @@
         width: 100%;
         object-fit: cover;
         object-position: top;
+
+        @media (max-width:700px) {
+            height: 70vh;
+        }
+
+        @media (max-width:600px) {
+            height: 60vh;
+        }
+
+        @media (max-width:500px) {
+            height: 50vh;
+        }
+        @media (max-width:400px) {
+            height: 45vh;
+        }
+    }
+
+    @media (max-width:700px) {
+        height: 70vh;
+    }
+
+    @media (max-width:600px) {
+        height: 60vh;
+    }
+
+    @media (max-width:500px) {
+        height: 50vh;
+    }
+
+    @media (max-width:400px) {
+        height: 45vh;
     }
 }
 
