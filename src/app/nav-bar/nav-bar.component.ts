@@ -1,11 +1,12 @@
 import { CommonModule, } from '@angular/common';
 import { Component, OnInit,Renderer2 } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [CommonModule,RouterLink],
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })

@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component,ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import { ViewportScroller } from "@angular/common";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-carousel',
@@ -28,12 +30,17 @@ export class CarouselComponent implements AfterViewInit, OnDestroy{
   currentImageIndex: number = 0;
   private intervalId: any;
 
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef,private scroller: ViewportScroller) {}
 
   ngAfterViewInit(): void {
     this.intervalId = setInterval(() => {
       this.nextImage();
     }, 10000); 
+  }
+
+  scrollToAbMe(){
+    this.scroller.scrollToAnchor("scrollToMe")
+
   }
 
   ngOnDestroy(): void {

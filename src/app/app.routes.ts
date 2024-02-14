@@ -10,7 +10,7 @@ import { ShowGallaryComponent } from './show-gallary/show-gallary.component';
 import { ImprintComponent } from './imprint/imprint.component';
 
 export const routes: Routes = [
-    {path: '', component:HomeComponent},
+    {path: 'Home', component:HomeComponent},
     {path: 'AboutMe', component:AboutMeComponent},
     {path: 'Braut', component:BrautComponent},
     {path: 'Preis', component:PreisComponent},
@@ -20,6 +20,6 @@ export const routes: Routes = [
     {path: 'Frisurenwelt', component:ShowGallaryComponent},
     {path: 'Kreatives', component:ShowGallaryComponent},
     {path: 'Impressum', component:ImprintComponent},
-    {path: '**', redirectTo: ''},
+    {path: '**', redirectTo: 'Home'},
 
 ];
