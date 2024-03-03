@@ -17,7 +17,7 @@ export class PreviewAboutMeComponent implements OnInit{
       src: './assets/img/About.jpg',
       title: 'Hallo! Ich bin Swetlana Horning',
       subTitle: 'Frisuermeisterin & Makeup-Artist',
-      span: 'Ich bin zutiefst davon überzeugt, dass Make-up die Kraft hat,dein Selbstbewusstsein zu stärken und dir dadurch ein fantastisches Gefühl zu verleihen.',
+      span: 'Ich bin zutiefst davon überzeugt, dass Make-up die Kraft hat, Dein Selbstbewusstsein zu stärken und dir dadurch ein fantastisches Gefühl zu verleihen.',
       button: 'Mehr über mich',
       reverse: false,
       nav: 'AboutMe'

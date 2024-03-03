@@ -35,7 +35,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy{
   ngAfterViewInit(): void {
     this.intervalId = setInterval(() => {
       this.nextImage();
-    }, 10000); 
+    }, 4750); 
   }
 
   scrollToAbMe(){

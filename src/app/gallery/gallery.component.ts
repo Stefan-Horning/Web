@@ -85,6 +85,7 @@ export class GalleryComponent implements OnInit{
     './assets/img/StylingKreationen/25.jpg',
     './assets/img/StylingKreationen/26.jpeg',
     './assets/img/StylingKreationen/27.jpeg',
+    './assets/img/StylingKreationen/28.jpeg',
   ]
 
   frisurenWelt:string[] = [
@@ -97,10 +98,18 @@ export class GalleryComponent implements OnInit{
     './assets/img/Frisurenwelt/7.jpg',
     './assets/img/Frisurenwelt/8.jpg',
     './assets/img/Frisurenwelt/9.jpg',
-    './assets/img/Frisurenwelt/10.jpg',
     './assets/img/Frisurenwelt/11.jpg',
     './assets/img/Frisurenwelt/12.jpeg',
     './assets/img/Frisurenwelt/13.jpg',
+    './assets/img/Frisurenwelt/14.jpg',
+    './assets/img/Frisurenwelt/15.jpg',
+    './assets/img/Frisurenwelt/16.jpg',
+    './assets/img/Frisurenwelt/17.jpg',
+    './assets/img/Frisurenwelt/18.jpg',
+    './assets/img/Frisurenwelt/19.jpg',
+    './assets/img/Frisurenwelt/20.jpg',
+    './assets/img/Frisurenwelt/21.jpg',
+    './assets/img/Frisurenwelt/22.jpg',
   ]
 
   BrautImages:string[] = [
@@ -114,6 +123,15 @@ export class GalleryComponent implements OnInit{
     './assets/img/Brautglanz/braut11.jpg',
     './assets/img/Brautglanz/braut12.jpg',
     './assets/img/Brautglanz/braut13.jpg',
+    './assets/img/Brautglanz/braut14.jpg',
+    './assets/img/Brautglanz/braut15.jpg',
+    './assets/img/Brautglanz/braut16.jpg',
+    './assets/img/Brautglanz/braut17.jpg',
+    './assets/img/Brautglanz/braut18.jpg',
+    './assets/img/Brautglanz/braut19.jpg',
+    './assets/img/Brautglanz/braut20.jpg',
+    './assets/img/Brautglanz/braut21.jpg',
+    './assets/img/Brautglanz/braut22.jpg',
     './assets/img/photo3.jpg',
   ]
 
