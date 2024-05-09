@@ -9,16 +9,20 @@
 }
 
 .ToTop{
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 
-    img{
-        cursor: pointer;
-        padding: 16px;
+    div{
+        position: absolute;
+        right: 30px;
+        top: -40px;
     }
 }
+
+
 
 .overcontacs{
     height: 400px;
@@ -162,4 +166,56 @@
         cursor: default !important;
         color: white !important;
     }
+}
+
+
+
+//-----------------//
+
+.arrow {
+	width: 30px;
+	height: 30px;
+	box-sizing: border-box;
+	transform: rotate(-45deg);
+	
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		border-width: .6vmin .6vmin 0 0;
+		border-style: solid;
+		border-color: #fafafa;
+		transition: .2s ease;
+		display: block;
+		transform-origin: 100% 0;
+	}
+
+	
+	&:after {
+		content: '';
+		float: left;
+		position: relative;
+		top: -100%;
+		width: 100%;
+		height: 100%;
+		border-width: 0 .6vmin 0 0;
+		border-style: solid;
+		border-color: #fafafa;
+		transform-origin: 100% 0;
+		transition:.2s ease;
+	}
+	
+	&:hover::after {
+        cursor: pointer;
+		transform: rotate(45deg);
+		border-color: rgb(197, 197, 197);
+		height: 120%;
+	}
+	&:hover::before {
+        cursor: pointer;
+		border-color: rgb(182, 182, 182);
+		transform: scale(.8);
+		
+	}
+	
 }
