@@ -8,16 +8,60 @@
         <span class="send" *ngIf="send">Nachricht gesendet</span>
         <form  (ngSubmit)="sendMail()" [formGroup]="contactForm" #formID="ngForm">
             <div>
-                <input autocomplete="off" #nameField formControlName="nameInput" required minlength="2" type="text" placeholder="Ihren Namen" [(ngModel)]="name">
+                <input
+                autocomplete="off"
+                formControlName="nameInput"
+                required
+                minlength="2"
+                type="text"
+                placeholder="Ihr Namen"
+              />
                 <!-- <span *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)">Bitte geben Sie Ihren Namen an</span> -->
             </div>
             <div>
-                <input autocomplete="off" #emailField formControlName="emailInput" required type="email" placeholder="Ihre E-Mail" [(ngModel)]="email">
+                <input
+                  autocomplete="off"
+                  formControlName="phoneInput"
+                  required
+                  type="text"
+                  placeholder="Ihre Telefonnummer"
+                  minlength="11"
+            />
                 <!-- <span *ngIf=" contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched && contactForm.controls['email'].hasError('pattern'))">Bitte geben Sie Ihre E-Mail an</span> -->
             </div>
             <div>
-                <textarea autocomplete="off" #massageField formControlName="massageInput" required minlength="5" placeholder="Ihre Nachricht an mich" [(ngModel)]="message" cols="30" rows="10"></textarea>
+                <input
+                  autocomplete="off"
+                  formControlName="emailInput"
+                  required
+                  type="email"
+                  placeholder="Ihre E-Mail"
+                />
+                <!-- <span *ngIf="contactForm.controls['emailInput'].invalid && (contactForm.controls['emailInput'].dirty || contactForm.controls['emailInput'].touched)">
+                  Bitte geben Sie Ihre E-Mail an
+                </span> -->
+              </div>
+            <div>
+                <textarea
+                autocomplete="off"
+                formControlName="messageInput"
+                required
+                minlength="5"
+                placeholder="Ihre Nachricht an uns"
+                cols="30"
+                rows="10"
+              ></textarea>
                 <!-- <span *ngIf="contactForm.controls['massage'].invalid && (contactForm.controls['massage'].dirty || contactForm.controls['massage'].touched)" >Mindestlänge 5 Zeichen</span> -->
+            </div>
+            <div>
+              <div style="display: flex; flex-direction: row; color: rgb(225, 220, 215);">
+                <input style="height: 1.2rem; width: 1.2rem;" type="checkbox" formControlName="termsInput">
+                <div style="display: flex; justify-content: flex-start; align-items: flex-start;"><span style="display: block;">
+                  Ich akzeptiere die <a aria-label="Datenschutzerklärung/Impressum" target="_blank" style="color: rgb(0, 166, 255);" routerLink="/Impressum">Datenschutzerklärung</a>.</span></div>
+                </div>
+              <div style="display: flex; justify-content: center; align-items: center;" *ngIf="contactForm.get('termsInput')?.invalid && contactForm.get('termsInput')?.touched">
+                <span style="display: block; text-align: center; color: red; height: 55px;">Sie müssen die Nutzungsbedingungen akzeptieren.</span>
+              </div>
             </div>
             <div>
                 <button [disabled]="!contactForm.valid" #buttonField>Nachricht senden</button>

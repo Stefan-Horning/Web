@@ -3,13 +3,13 @@
         <div>
             <img src="./assets/img/Logo.png" alt="">
         </div>
-        <a routerLink="/Home" [routerLinkActive]="'active-link'" >HOME</a>
-        <a routerLink="/Galerie" [routerLinkActive]="'active-link'" >GALERIE</a>
-        <a routerLink="/AboutMe" [routerLinkActive]="'active-link'">ÜBER-MICH</a>
-        <a routerLink="/Braut" [routerLinkActive]="'active-link'">BRAUT</a>
-        <a routerLink="/Preis" [routerLinkActive]="'active-link'">PREISE</a>
+        <a aria-label="Home-Seite" routerLink="/Home" [routerLinkActive]="'active-link'" >HOME</a>
+        <a aria-label="Galerie-Seite" routerLink="/Galerie" [routerLinkActive]="'active-link'" >GALERIE</a>
+        <a aria-label="AboutMe-Seite" routerLink="/AboutMe" [routerLinkActive]="'active-link'">ÜBER-MICH</a>
+        <a aria-label="Braut-Seite" routerLink="/Braut" [routerLinkActive]="'active-link'">BRAUT</a>
+        <a aria-label="Preis-Seite" routerLink="/Preis" [routerLinkActive]="'active-link'">PREISE</a>
     </div>
-    <a routerLink="/Kontakt"><button class="btn-2"><span  [routerLinkActive]="'active-link'">ANFRAGE SENDEN</span></button></a>
+    <a aria-label="Kontakt-Seite" routerLink="/Kontakt"><button class="btn-2"><span  [routerLinkActive]="'active-link'">ANFRAGE SENDEN</span></button></a>
 </div>
 
 <div (click)="openNav()" class="close" *ngIf="!openMobile">
@@ -26,11 +26,11 @@
         <div>
             <img src="./assets/img/Logo.png" alt="">
         </div>
-        <a routerLink="/Home" (click)="openNav()" [routerLinkActive]="'active-link'" >HOME</a>
-        <a routerLink="/Galerie" (click)="openNav()" [routerLinkActive]="'active-link'" >GALERIE</a>
-        <a routerLink="/AboutMe" (click)="openNav()" [routerLinkActive]="'active-link'">ÜBER-MICH</a>
-        <a routerLink="/Braut" (click)="openNav()" [routerLinkActive]="'active-link'">BRAUT</a>
-        <a routerLink="/Preis" (click)="openNav()" [routerLinkActive]="'active-link'">PREISE</a>
+        <a  aria-label="Home-Seite" routerLink="/Home" (click)="openNav()" [routerLinkActive]="'active-link'" >HOME</a>
+        <a aria-label="Galerie-Seite" routerLink="/Galerie" (click)="openNav()" [routerLinkActive]="'active-link'" >GALERIE</a>
+        <a aria-label="AboutMe-Seite" routerLink="/AboutMe" (click)="openNav()" [routerLinkActive]="'active-link'">ÜBER-MICH</a>
+        <a aria-label="Braut-Seite" routerLink="/Braut" (click)="openNav()" [routerLinkActive]="'active-link'">BRAUT</a>
+        <a aria-label="Preis-Seite" routerLink="/Preis" (click)="openNav()" [routerLinkActive]="'active-link'">PREISE</a>
     </div>
-    <a routerLink="/Kontakt" (click)="openNav()"><button class="btn-2"><span  [routerLinkActive]="'active-link'">ANFRAGE SENDEN</span></button></a>
+    <a aria-label="Kontakt-Seite" routerLink="/Kontakt" (click)="openNav()"><button class="btn-2"><span  [routerLinkActive]="'active-link'">ANFRAGE SENDEN</span></button></a>
 </div>

@@ -122,6 +122,7 @@ export class GalleryComponent implements OnInit{
     './assets/img/Brautglanz/braut7.jpg',
     './assets/img/Brautglanz/braut11.jpg',
     './assets/img/Brautglanz/braut12.jpg',
+    './assets/img/Brautglanz/braut24.jpg',
     './assets/img/Brautglanz/braut13.jpg',
     './assets/img/Brautglanz/braut14.jpg',
     './assets/img/Brautglanz/braut15.jpg',
@@ -132,6 +133,7 @@ export class GalleryComponent implements OnInit{
     './assets/img/Brautglanz/braut20.jpg',
     './assets/img/Brautglanz/braut21.jpg',
     './assets/img/Brautglanz/braut22.jpg',
+    './assets/img/Brautglanz/braut23.jpg',
     './assets/img/photo3.jpg',
   ]
 
