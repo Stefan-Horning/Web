@@ -1,7 +1,7 @@
 <div class="over-div destop">
     <div class="navi">
         <div>
-            <img src="./assets/img/Logo.png" alt="">
+            <img src="./assets/img/Logo.webp" alt="">
         </div>
         <a aria-label="Home-Seite" routerLink="/Home" [routerLinkActive]="'active-link'" >HOME</a>
         <a aria-label="Galerie-Seite" routerLink="/Galerie" [routerLinkActive]="'active-link'" >GALERIE</a>
@@ -13,18 +13,18 @@
 </div>
 
 <div (click)="openNav()" class="close" *ngIf="!openMobile">
-    <img src="./assets/img/icons/menu.png" alt="">
+    <img src="./assets/img/icons/menu.webp" alt="">
 </div>
 
-<img  class="mobile-logo" src="./assets/img/Logo.png" alt="">
+<img  class="mobile-logo" src="./assets/img/Logo.webp" alt="">
 
 
 <div class="over-div mobile" *ngIf="openMobile">
-    <img (click)="openNav()" class="closeButton" src="./assets/img/icons/x.png" alt="">
+    <img (click)="openNav()" class="closeButton" src="./assets/img/icons/x.webp" alt="">
     <div class="navi">
 
         <div>
-            <img src="./assets/img/Logo.png" alt="">
+            <img src="./assets/img/Logo.webp" alt="">
         </div>
         <a  aria-label="Home-Seite" routerLink="/Home" (click)="openNav()" [routerLinkActive]="'active-link'" >HOME</a>
         <a aria-label="Galerie-Seite" routerLink="/Galerie" (click)="openNav()" [routerLinkActive]="'active-link'" >GALERIE</a>

@@ -13,11 +13,11 @@ import { RouterLink } from '@angular/router';
 
 export class CarouselComponent implements AfterViewInit, OnDestroy{
   images: string[] = [
-    'assets/img/Main-picture.jpg',
-    'assets/img/photo2.jpg',
-    'assets/img/head-3.JPG',
-    'assets/img/head7.jpeg',
-    'assets/img/head6.jpg',
+    'assets/img/Main-picture.webp',
+    'assets/img/photo2.webp',
+    'assets/img/head-3.webp',
+    'assets/img/head7.webp',
+    'assets/img/head6.webp',
   ];
 
   imagesstyle:string[] = [
