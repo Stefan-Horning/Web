@@ -55,14 +55,24 @@
             </div>
             <div>
               <div style="display: flex; flex-direction: row; color: rgb(225, 220, 215);">
-                <input style="height: 1.2rem; width: 1.2rem;" type="checkbox" formControlName="termsInput">
-                <div style="display: flex; justify-content: flex-start; align-items: flex-start;"><span style="display: block;">
-                  Ich akzeptiere die <a aria-label="Datenschutzerklärung/Impressum" target="_blank" style="color: rgb(0, 166, 255);" routerLink="/Impressum">Datenschutzerklärung</a>.</span></div>
-                </div>
-              <div style="display: flex; justify-content: center; align-items: center;" *ngIf="contactForm.get('termsInput')?.invalid && contactForm.get('termsInput')?.touched">
-                <span style="display: block; text-align: center; color: red; height: 55px;">Sie müssen die Nutzungsbedingungen akzeptieren.</span>
+                <input id="checkboxDATA" style="height: 1.2rem; width: 1.2rem;" type="checkbox" formControlName="termsInput">
+                
+                <label for="checkboxDATA" style="margin-left: 8px;">
+                  Ich akzeptiere die
+                  <a aria-label="Datenschutzerklärung/Impressum" target="_blank" style="color: rgb(0, 166, 255);" routerLink="/Impressum">
+                    Datenschutzerklärung
+                  </a>.
+                </label>
+              </div>
+            
+              <div style="display: flex; justify-content: center; align-items: center;" 
+                   *ngIf="contactForm.get('termsInput')?.invalid && contactForm.get('termsInput')?.touched">
+                <span style="display: block; text-align: center; color: red; height: 55px;">
+                  Sie müssen die Nutzungsbedingungen akzeptieren.
+                </span>
               </div>
             </div>
+            
             <div>
                 <button [disabled]="!contactForm.valid" #buttonField>Nachricht senden</button>
             </div>
