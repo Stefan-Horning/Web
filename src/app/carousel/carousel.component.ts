@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component,ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component,ElementRef, AfterViewInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { ViewportScroller } from "@angular/common";
 import { RouterLink } from '@angular/router';
 
@@ -30,12 +30,15 @@ export class CarouselComponent implements AfterViewInit, OnDestroy{
   currentImageIndex: number = 0;
   private intervalId: any;
 
-  constructor(private el: ElementRef,private scroller: ViewportScroller) {}
+  constructor(private el: ElementRef,private scroller: ViewportScroller, @Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit(): void {
-    this.intervalId = setInterval(() => {
-      this.nextImage();
-    }, 4750); 
+    // Bild-Wechsel nur im Browser starten (kein Dauer-Timer beim Server-Prerendering)
+    if (isPlatformBrowser(this.platformId)) {
+      this.intervalId = setInterval(() => {
+        this.nextImage();
+      }, 4750);
+    }
   }
 
   scrollToAbMe(){

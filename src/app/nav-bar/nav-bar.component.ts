@@ -28,19 +28,15 @@ export class NavBarComponent implements OnInit{
   }
   
   getURL(){
-    const url = location.href;
-
-    // Gibt nur das Ende des URL-Pfades zurück
-    let pathname = location.pathname;
-    pathname = pathname.slice(1);
+    // Pfad-Ende der aktuellen Route ermitteln (funktioniert auch beim Prerendering auf dem Server)
+    let pathname = this.router.url.split('?')[0].split('#')[0];
+    pathname = pathname.replace(/^\//, '');
 
     if(pathname == ''){
-      pathname = 'Home';
       this.currentUrl = 'Home';
     }else{
       this.currentUrl = pathname;
     }
-  
   }
 
 }

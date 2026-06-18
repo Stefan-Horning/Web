@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { SlideshowComponent } from './slideshow/slideshow.component';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 
 @Component({
   selector: 'app-gallery',
@@ -19,7 +19,7 @@ export class GalleryComponent implements OnInit{
   currentUrl!:string;
   isGallary:boolean = true;
 
-  constructor(){
+  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object){
     this.getURL();
     this.currentImages = [];
     if(this.currentUrl == 'Home'){
@@ -38,19 +38,15 @@ export class GalleryComponent implements OnInit{
   }
 
   getURL(){
-    const url = location.href;
-
-    // Gibt nur das Ende des URL-Pfades zurück
-    let pathname = location.pathname;
-    pathname = pathname.slice(1);
+    // Pfad-Ende der aktuellen Route ermitteln (funktioniert auch beim Prerendering auf dem Server)
+    let pathname = this.router.url.split('?')[0].split('#')[0];
+    pathname = pathname.replace(/^\//, '');
 
     if(pathname == ''){
-      pathname = 'HOME';
       this.currentUrl = 'Home';
     }else{
       this.currentUrl = pathname;
     }
-  
   }
 
   currentImages:string[] = [
@@ -181,15 +177,19 @@ export class GalleryComponent implements OnInit{
   ];
 
   ngOnInit(): void {
-    AOS.init({
-      duration: 550,
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.init({
+        duration: 550,
+      });
+    }
   }
 
   ngAfterViewInit(){
-    setTimeout(() =>{
-      AOS.refresh();
-    },500);
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() =>{
+        AOS.refresh();
+      },500);
+    }
   }
 
   openSlider(i?:number){

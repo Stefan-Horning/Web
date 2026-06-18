@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterLink } from '@angular/router';
 //import * as AOS from 'aos';
 import AOS from 'aos';
@@ -12,6 +12,8 @@ import 'aos/dist/aos.css';
   styleUrl: './preview-about-me.component.scss'
 })
 export class PreviewAboutMeComponent implements OnInit{
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   previewArray:any = [
     {
       src: './assets/img/About.webp',
@@ -41,16 +43,20 @@ export class PreviewAboutMeComponent implements OnInit{
       nav: 'Preis'
     },
   ]
-  
+
   ngOnInit(): void {
-    AOS.init({
-      duration: 750,
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.init({
+        duration: 750,
+      });
+    }
   }
 
   ngAfterViewInit(){
-    setTimeout(() =>{
-      AOS.refresh();
-    },500);
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() =>{
+        AOS.refresh();
+      },500);
+    }
   }
 }

@@ -1,9 +1,17 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter, withRouterConfig, } from '@angular/router';
+import { provideRouter, withViewTransitions, withInMemoryScrolling } from '@angular/router';
+import { provideClientHydration } from '@angular/platform-browser';
 import { routes } from './app.routes';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes),provideHttpClient()]
-  
+  providers: [
+    provideRouter(
+      routes,
+      withViewTransitions(),
+      withInMemoryScrolling({ scrollPositionRestoration: 'top' })
+    ),
+    provideClientHydration(),
+    provideHttpClient(withFetch())
+  ]
 };

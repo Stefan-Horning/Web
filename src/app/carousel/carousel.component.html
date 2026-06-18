@@ -1,9 +1,10 @@
 <div class="Main-picture-container">
   <img *ngFor="let image of images; let i = index" 
-       [src]="image" 
-       [alt]="'Image ' + i" 
-       [class.active]="i === currentImageIndex" 
+       [src]="image"
+       [alt]="'Make-up & Hairstyling von Swetlana Horning – Look ' + (i + 1)"
+       [class.active]="i === currentImageIndex"
        [class.right]="imagesstyle[i] == 'right'"
+       [attr.fetchpriority]="i === 0 ? 'high' : 'low'"
        (load)="nextImage()"
   />
 

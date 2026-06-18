@@ -1,7 +1,7 @@
 <div class="over-div destop">
     <div class="navi">
         <div>
-            <img src="./assets/img/Logo.webp" alt="">
+            <img src="./assets/img/Logo.webp" fetchpriority="high" width="300" height="44" alt="Swetlana Horning – Make-up Artist & Friseurmeisterin Logo">
         </div>
         <a aria-label="Home-Seite" routerLink="/" [routerLinkActive]="'active-link'" [routerLinkActiveOptions]="{ exact: true }">HOME</a>
         <a aria-label="Galerie-Seite" routerLink="/Galerie" [routerLinkActive]="'active-link'" >GALERIE</a>
@@ -13,18 +13,18 @@
 </div>
 
 <div (click)="openNav()" class="close" *ngIf="!openMobile">
-    <img src="./assets/img/icons/menu.webp" alt="">
+    <img src="./assets/img/icons/menu.webp" alt="Menü öffnen">
 </div>
 
-<img  class="mobile-logo" src="./assets/img/Logo.webp" alt="">
+<img  class="mobile-logo" src="./assets/img/Logo.webp" fetchpriority="high" width="280" height="41" alt="Swetlana Horning – Make-up Artist & Friseurmeisterin Logo">
 
 
 <div class="over-div mobile" *ngIf="openMobile">
-    <img (click)="openNav()" class="closeButton" src="./assets/img/icons/x.webp" alt="">
+    <img (click)="openNav()" class="closeButton" src="./assets/img/icons/x.webp" alt="Menü schließen">
     <div class="navi">
 
         <div>
-            <img src="./assets/img/Logo.webp" alt="">
+            <img src="./assets/img/Logo.webp" fetchpriority="high" width="300" height="44" alt="Swetlana Horning – Make-up Artist & Friseurmeisterin Logo">
         </div>
         <a  aria-label="Home-Seite" routerLink="/" (click)="openNav()" [routerLinkActive]="'active-link'" [routerLinkActiveOptions]="{ exact: true }">HOME</a>
         <a aria-label="Galerie-Seite" routerLink="/Galerie" (click)="openNav()" [routerLinkActive]="'active-link'" >GALERIE</a>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -11,15 +12,21 @@ import 'aos/dist/aos.css';
   styleUrl: './preis.component.scss'
 })
 export class PreisComponent implements OnInit{
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngOnInit(): void {
-    AOS.init({
-      duration: 550,
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.init({
+        duration: 550,
+      });
+    }
   }
 
   ngAfterViewInit(){
-    setTimeout(() =>{
-      AOS.refresh();
-    },500);
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() =>{
+        AOS.refresh();
+      },500);
+    }
   }
 }

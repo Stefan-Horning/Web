@@ -3,7 +3,7 @@
     <div class="previewAboutMe"  [ngStyle]="i.reverse ? {'background-color': '#151518'} : {}">
         <div [ngStyle]="i.reverse ? {'flex-direction': 'row-reverse'} : {}">
             <div class="image">
-                <img [attr.data-aos]="i.reverse ? 'fade-left' : 'fade-right'" data-aos-duration="1000" src="{{ i.src }}" alt="">
+                <img [attr.data-aos]="i.reverse ? 'fade-left' : 'fade-right'" data-aos-duration="1000" src="{{ i.src }}" [attr.alt]="i.title">
             </div>
             <div class="text">
                 <h1>{{ i.title }}</h1>

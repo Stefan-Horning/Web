@@ -78,8 +78,13 @@
       margin-right: 20px;
     }
 
+    > div:first-child{
+        flex-shrink: 0;
+    }
+
     img{
-        object-fit: cover;
+        object-fit: contain;
+        flex-shrink: 0;
         max-width: 300px;
         max-height: 200px;
         margin-right: 100px;
@@ -272,11 +277,11 @@ button {
   @media (max-width:1000px) {
     display: block;
     position: absolute;
-  top: 0px;
+  top: 20px;
   left: 20px;
 
-  width: 200px;
-  height: 80px;
+  width: 280px;
+  height: 41px;
   object-fit: contain;
   }
   
