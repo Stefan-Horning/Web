@@ -33,6 +33,10 @@ $Makeupartist-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($Makeupartist-theme);
 
+*{
+  scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     //font-family: 'Open Sans';

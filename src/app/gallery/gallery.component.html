@@ -1,11 +1,11 @@
 <div style="background-color: #151518; padding-bottom: 50px;">
     <div class="overdiv">
         <div *ngFor="let i of currentImages;let index = index" class="imageContainer">
-            <img (click)="openSlider(index)" data-aos="zoom-in" data-aos-duration="500" src="{{ i }}" alt="">
+            <img (click)="openSlider(index)" data-aos="zoom-in" fetchpriority="low" loading="lazy" decoding="async" data-aos-duration="500" src="{{ i }}" [attr.alt]="'Arbeit von Swetlana Horning – Make-up und Styling, Bild ' + (index + 1)">
         </div>
     </div>
     <div *ngIf="isGallary" class="button" data-aos="fade-up">
-        <a href="Galerie"><button href="" class="btn-2"><span>Zur meiner Galerie</span></button></a>
+        <a aria-label="Zu der Galerie" routerLink="/Galerie"><button class="btn-2"><span>Zur meiner Galerie</span></button></a>
     </div>
 </div>
 <app-slideshow *ngIf="open" [images]="currentImages" [wichone]="setImage"></app-slideshow>

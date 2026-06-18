@@ -1,11 +1,12 @@
 import { CommonModule, } from '@angular/common';
 import { Component, OnInit,Renderer2 } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })
@@ -27,20 +28,15 @@ export class NavBarComponent implements OnInit{
   }
   
   getURL(){
-    const url = location.href;
-
-    // Gibt nur das Ende des URL-Pfades zurück
-    let pathname = location.pathname;
-    pathname = pathname.slice(1);
+    // Pfad-Ende der aktuellen Route ermitteln (funktioniert auch beim Prerendering auf dem Server)
+    let pathname = this.router.url.split('?')[0].split('#')[0];
+    pathname = pathname.replace(/^\//, '');
 
     if(pathname == ''){
-      pathname = 'Home';
       this.currentUrl = 'Home';
     }else{
       this.currentUrl = pathname;
     }
-   
-    console.log(pathname); // /my-path
   }
 
 }

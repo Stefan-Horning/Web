@@ -1,0 +1,41 @@
+# robots.txt – Swetlana Horning, Make-up Artist & Friseurmeisterin (Krefeld)
+# Suchmaschinen und KI-/Answer-Engines sind ausdrücklich willkommen.
+
+User-agent: *
+Allow: /
+
+# KI-Suchdienste explizit erlauben, damit die Seite in KI-Antworten erscheinen darf
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://www.swetlana-makeupartist.de/sitemap.xml

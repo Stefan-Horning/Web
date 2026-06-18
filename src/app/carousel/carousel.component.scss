@@ -19,11 +19,41 @@
       &.active {
         opacity: 1;
       }
+
+        @media (max-width:1000px) {
+          object-fit: cover;
+        }
     }
+
 
     @media (max-width:1000px) {
       height: 80vh;
+      
     }
+    @media (max-width:800px) {
+      height: 60vh;
+      
+    }
+
+    @media (max-width:600px) {
+      height: 50vh;
+      
+    }
+
+    @media (max-width:450px) {
+      height: 45vh;
+      
+    }
+
+    // @media (max-width:350px) {
+    //   height: 35vh;
+      
+    // }
+}
+
+
+.right{
+  object-position: top right !important;
 }
 
 .ScrollDown{
@@ -49,6 +79,10 @@
     height: 30px;
     width: 30px;
     fill: white;
+  }
+
+  @media (max-width:1000px) {
+    display: none;
   }
 }
 

@@ -1,3 +1,6 @@
-<app-nav-bar class="nav"></app-nav-bar>
-<router-outlet></router-outlet>
+<app-nav-bar id="topPoint" class="nav"></app-nav-bar>
+<main>
+  <router-outlet (activate)="onActivate($event)"></router-outlet>
+</main>
 <app-footer></app-footer>
+<app-whatsapp-button></app-whatsapp-button>

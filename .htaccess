@@ -1,0 +1,82 @@
+# =============================================================
+#  Swetlana Horning – Make-up Artist & Friseurmeisterin
+#  .htaccess für die prerenderte Angular-Seite (SSG)
+#  Inhalt von dist/makeupartist/browser/ ins Webroot hochladen.
+# =============================================================
+
+RewriteEngine On
+RewriteBase /
+
+# -------------------------------------------------------------
+#  1) Weiterleitungen auf https://www. (kanonische Domain)
+# -------------------------------------------------------------
+# 1a) HTTP -> HTTPS
+RewriteCond %{SERVER_PORT} !=443
+RewriteRule ^(.*)$ https://www.swetlana-makeupartist.de/$1 [R=301,L]
+
+# 1b) ohne www -> mit www
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.swetlana-makeupartist.de/$1 [R=301,L]
+
+# -------------------------------------------------------------
+#  2) Routing
+# -------------------------------------------------------------
+# 2a) Existierende Dateien direkt ausliefern (JS, CSS, Bilder,
+#     robots.txt, sitemap.xml, llms.txt, favicon, Fonts ...)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# 2b) Prerenderte Seite ausliefern, falls vorhanden
+#     (z. B. /Braut -> /Braut/index.html, /Preis -> /Preis/index.html)
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+RewriteRule ^(.+?)/?$ /$1/index.html [L]
+
+# 2c) Fallback: Single-Page-App (Startseite übernimmt die Route)
+RewriteRule ^ /index.html [L]
+
+# -------------------------------------------------------------
+#  3) GZIP-/Deflate-Komprimierung (Ladezeit / Core Web Vitals)
+# -------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# -------------------------------------------------------------
+#  4) Browser-Caching
+#     - gehashte Assets (JS/CSS/Bilder/Fonts): lange cachen
+#     - HTML: nicht cachen, damit Aktualisierungen sofort erscheinen
+# -------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css                 "access plus 1 year"
+  ExpiresByType application/javascript   "access plus 1 year"
+  ExpiresByType image/webp               "access plus 6 months"
+  ExpiresByType image/jpeg               "access plus 6 months"
+  ExpiresByType image/png                "access plus 6 months"
+  ExpiresByType image/svg+xml            "access plus 6 months"
+  ExpiresByType image/x-icon             "access plus 1 year"
+  ExpiresByType font/woff2               "access plus 1 year"
+  ExpiresByType text/html                "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # HTML immer frisch validieren (prerenderte Seiten)
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  # Gehashte Build-Dateien sind unveränderlich
+  <FilesMatch "\-[A-Z0-9]{8}\.(js|css)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# -------------------------------------------------------------
+#  5) MIME-Typen (Fallback für ältere Server)
+# -------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+</IfModule>
