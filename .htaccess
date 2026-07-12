@@ -80,3 +80,9 @@ RewriteRule ^ /index.html [L]
   AddType image/webp .webp
   AddType font/woff2 .woff2
 </IfModule>
+
+# -------------------------------------------------------------
+#  6) Zeichensatz im HTTP-Header mitsenden (SEO-Check:
+#     "Es fehlen Zeichensatzangaben im HTTP Header")
+# -------------------------------------------------------------
+AddDefaultCharset UTF-8

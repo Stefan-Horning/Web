@@ -1,16 +1,17 @@
 
-<div *ngFor="let i of previewArray">
+<div *ngFor="let i of previewArray; let first = first">
     <div class="previewAboutMe"  [ngStyle]="i.reverse ? {'background-color': '#151518'} : {}">
         <div [ngStyle]="i.reverse ? {'flex-direction': 'row-reverse'} : {}">
             <div class="image">
                 <img [attr.data-aos]="i.reverse ? 'fade-left' : 'fade-right'" data-aos-duration="1000" src="{{ i.src }}" [attr.alt]="i.title">
             </div>
             <div class="text">
-                <h1>{{ i.title }}</h1>
-                <h2>{{ i.subTitle }}</h2>
-                <span>
+                <h1 *ngIf="first" class="title">{{ i.title }}</h1>
+                <h2 *ngIf="!first" class="title">{{ i.title }}</h2>
+                <h2 class="subtitle">{{ i.subTitle }}</h2>
+                <p>
                     {{i.span}}
-                </span>
+                </p>
                 <div class="button" data-aos="fade-up">
                     <a [attr.aria-label]="i.button" routerLink="/{{i.nav}}"><button class="btn-2"><span>{{ i.button }}</span></button></a>
                 </div>

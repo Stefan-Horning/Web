@@ -17,7 +17,7 @@
         align-items: center;
 
         
-        h1,h2,span{
+        h1,h2,p,span{
           margin-left: 10px;
           margin-right: 10px;
           text-align: center;
@@ -70,23 +70,36 @@
         margin-left: 20px;
         margin-right: 20px;
 
-        h1{
+        // .title wird je nach Position als <h1> oder <h2> gerendert (SEO: nur eine
+        // H1 pro Seite) – Margin/Größe explizit, damit beide Tags identisch aussehen.
+        .title{
             font-size: 38px;
             font-weight: 400;
             display: flex;
             justify-content: flex-start !important;
             color: rgb(154, 116, 83);
+            margin-top: 0.67em;
             margin-bottom: 0;
         }
 
-        h2{
+        .subtitle{
+            font-size: 1.5em;
             font-weight: 300;
             color: rgb(180, 142, 104);
+            margin: 0.83em 0;
         }
     
         span{
            color:  rgb(225, 220, 215);
            font-size: 18px;
+        }
+
+        // Fließtext als echter <p>-Absatz (SEO); margin 0, damit er
+        // exakt wie der frühere <span> sitzt.
+        p{
+           color:  rgb(225, 220, 215);
+           font-size: 18px;
+           margin: 0;
         }
     }
 

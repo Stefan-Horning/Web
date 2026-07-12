@@ -9,7 +9,7 @@ const SITE_NAME = 'Swetlana Horning – Make-up Artist & Friseurmeisterin';
 const DEFAULT_TITLE =
   'Make-up Artist & Friseurmeisterin in Krefeld | Swetlana Horning';
 const DEFAULT_DESCRIPTION =
-  'Professionelles Make-up, Brautstyling & Hairstyling von Swetlana Horning in Krefeld. Mobiler Service für Hochzeit, Foto, Gala & Events. Jetzt unverbindlich anfragen!';
+  'Professionelles Make-up, Brautstyling & Hairstyling von Swetlana Horning in Krefeld. Mobiler Service für Hochzeit, Foto & Events. Jetzt anfragen!';
 const DEFAULT_IMAGE = SITE_URL + '/assets/img/Main-picture.webp';
 
 interface SeoData {

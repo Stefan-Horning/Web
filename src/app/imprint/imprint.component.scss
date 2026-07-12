@@ -1,3 +1,11 @@
+// Sieht aus wie eine h1 (Browser-Defaults), ist aber eine h2 –
+// SEO: nur eine H1 pro Seite.
+.h1-look{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.67em 0;
+}
+
 .overdiv{
     background-color: #151518;
     padding-top: 100px;

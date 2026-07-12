@@ -47,9 +47,13 @@
     overflow: hidden;
 }
 
-h1{
+// h2 sieht identisch zu h1 aus (SEO: nur eine H1 pro Seite);
+// Margin/Gewicht explizit, da die Browser-Defaults von h1/h2 abweichen.
+h1, h2{
     color: rgb(154, 116, 83);
     font-size: 36px;
+    font-weight: bold;
+    margin: 0.67em 0;
     @media (max-width:1300px) {
       text-align: center;
     }
@@ -140,7 +144,7 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1{
+    h1, h2{
 
         color: #151518;
         font-size: 28px;
