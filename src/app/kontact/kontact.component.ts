@@ -13,6 +13,8 @@ import { RouterLink } from '@angular/router';
 })
 export class KontactComponent {
   send:boolean = false;
+  buttonSent:boolean = false;
+  sendError:boolean = false;
   name:any;
   email:any;
   phone:any;
@@ -34,7 +36,7 @@ export class KontactComponent {
   http = inject(HttpClient)
 
   post = {
-    endPoint: 'https://swetlana-makeupartist.de/Mailer/sendMailStefan.php',
+    endPoint: 'https://www.swetlana-makeupartist.de/Mailer/sendMailStefan.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -57,12 +59,20 @@ export class KontactComponent {
             console.log(response);  // Ausgabe der Antwort zur Überprüfung
             this.contactForm.reset();
             this.send = true;
+            this.buttonSent = true;
+            setTimeout(() => {
+              this.buttonSent = false;
+            }, 4000);
             setTimeout(() => {
               this.send = false;
             }, 25000);
           },
           error: (error) => {
             console.error(error);
+            this.sendError = true;
+            setTimeout(() => {
+              this.sendError = false;
+            }, 6000);
           },
           complete: () => console.info('send post complete'),
         });

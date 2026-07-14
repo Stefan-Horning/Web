@@ -74,7 +74,12 @@
             </div>
             
             <div>
-                <button [disabled]="!contactForm.valid" #buttonField>Nachricht senden</button>
+                <button [disabled]="!contactForm.valid && !buttonSent" [class.sent]="buttonSent" [class.error]="sendError" #buttonField>
+                  {{ buttonSent ? 'Gesendet' : (sendError ? 'Fehler' : 'Nachricht senden') }}
+                </button>
+                <span class="error-message" *ngIf="sendError">
+                  Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.
+                </span>
             </div>
             
         </form>
